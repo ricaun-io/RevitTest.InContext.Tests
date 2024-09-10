@@ -25,7 +25,7 @@ namespace RevitTest.InContext.Tests
             {
                 Run(uiapp);
             });
-            Console.WriteLine($"Time: {time} ms");
+            Console.WriteLine($"Time: {time:0.0000} ms");
             return Run(uiapp);
         }
 
@@ -40,7 +40,7 @@ namespace RevitTest.InContext.Tests
                 {
                     Run(uiapp);
                 });
-                Console.WriteLine($"Time: {time} ms");
+                Console.WriteLine($"Time: {time:0.0000} ms");
                 return Run(uiapp);
             });
             return task.GetAwaiter().GetResult();
