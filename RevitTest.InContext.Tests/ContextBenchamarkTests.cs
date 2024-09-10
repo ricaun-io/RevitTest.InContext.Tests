@@ -17,7 +17,7 @@ namespace RevitTest.InContext.Tests
             this.uiapp = uiapp;
         }
 
-        [TestCase(1000, ExpectedResult = true)]
+        [TestCase(10000, ExpectedResult = true)]
         public bool TestContext(int length)
         {
             Console.WriteLine(Run(uiapp));
@@ -29,7 +29,7 @@ namespace RevitTest.InContext.Tests
             return Run(uiapp);
         }
 
-        [TestCase(1000, ExpectedResult = false)]
+        [TestCase(10000, ExpectedResult = false)]
         public bool TestNoContext(int length)
         {
             var task = Task.Run(async () =>
