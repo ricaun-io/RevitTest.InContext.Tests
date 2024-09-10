@@ -6,6 +6,10 @@
 
 This project contains tests that are run in the context of a Revit using the [ricaun.RevitTest](https://ricaun.com/RevitTest) Framework.
 
+## Revit API Forum
+
+* [How to know if Revit API is in Context.](https://forums.autodesk.com/t5/revit-api-forum/how-to-know-if-revit-api-is-in-context/td-p/12574320)
+
 ## License
 
 This project is [licensed](LICENSE) under the [MIT Licence](https://en.wikipedia.org/wiki/MIT_License).

@@ -1,4 +1,5 @@
-﻿using Autodesk.Revit.UI;
+﻿using Autodesk.Revit.ApplicationServices;
+using Autodesk.Revit.UI;
 
 public static class InAddInContextExtension
 {
@@ -7,6 +8,14 @@ public static class InAddInContextExtension
         return application.ActiveAddInId is not null;
     }
     public static bool InAddInContext(this UIControlledApplication application)
+    {
+        return application.ActiveAddInId is not null;
+    }
+    public static bool InAddInContext(this ControlledApplication application)
+    {
+        return application.ActiveAddInId is not null;
+    }
+    public static bool InAddInContext(this Application application)
     {
         return application.ActiveAddInId is not null;
     }
