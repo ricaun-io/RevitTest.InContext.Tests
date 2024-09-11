@@ -43,8 +43,11 @@ namespace RevitTest.InContext.Tests
                 _monitor.Start();
                 RunBenchmark(TargetIterations, target);
                 _monitor.Stop();
-
+#if NET
+                Console.WriteLine($"{target.Method.Name}: \t{(_monitor.Elapsed.TotalNanoseconds / TargetIterations):0.0} ns.");
+#else
                 Console.WriteLine($"{target.Method.Name}: \t{(_monitor.Elapsed.TotalMilliseconds / TargetIterations):0.0000} ms.");
+#endif
                 _monitor.Reset();
             }
         }
