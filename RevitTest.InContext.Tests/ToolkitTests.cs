@@ -56,14 +56,7 @@ namespace RevitTest.InContext.Tests
         {
             for (var i = 0; i < iterations; i++)
             {
-                try
-                {
-                    target.Invoke();
-                }
-                catch
-                {
-                    //ignored
-                }
+                target.Invoke();
             }
         }
 
